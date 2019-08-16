@@ -10,9 +10,8 @@ body nav {
 
 .nav-bar-outer {
     position: absolute;
-    top: 30px;
-    left: 500px;
-    width: auto;
+    top: 15px;
+    left: 25%;
     border: solid .5px #4e4b4b;
     border-radius: 3px;
 }
@@ -28,13 +27,22 @@ body nav {
     text-align: center;
 }
 
+.nav-bar-links img {
+    height: 22px;
+    width: 20px;
+}
+
+.nav-bar-links .logo {
+    padding-top: 5px;
+    padding-bottom: 3px;
+}
+
 .nav-bar-links il {
     background-image: radial-gradient(#4e4b4b, #747373);
     width: 100px;
     padding-top: 8px;
     padding-bottom: 8px;
     border: solid 1px #4e4b4b;
-    
 }
 
 .nav-bar-links il a {
@@ -57,16 +65,22 @@ body nav {
     width: 100px;
 }
 
-.billbord{
-    width: 70%;
-    height: 630px;
-    background: rgb(93, 152, 192);
+.billbord-picture {
+    size: 100%;
+    width: 75%;
+    height: 640px;
     margin: 0 auto;
+    background-image: url(https://web.archive.org/web/20140228114747im_/http://images.apple.com/v/home/as/images/your_verse_hero.jpg);
+    background-position-x: 50%;
+    background-position-y: 100%;
+    background-size: 1440px 1315px;
 }
 
-.billbord-picture {
-    background-image: url(/images/billbord-picture.jpg);
-    size: 100%;
+@media only screen and (max-width: 1600px) {
+    .billbord-picture {
+        width: 100%;
+        background-repeat: no-repeat;
+    }
 }
 
 .billbord-picture header {
@@ -106,8 +120,14 @@ body nav {
 }
 
 aside {
-    width: 70%;
+    width: 75%;
     margin: 0 auto;
+}
+
+@media only screen and (max-width: 1600px) {
+    aside {
+        width: 100%;
+    }
 }
 
 aside ul {
@@ -121,27 +141,86 @@ aside ul il {
 }
 
 .little-picture-one {
-    background-color: rgb(211, 199, 132);
+    background-image: url(https://web.archive.org/web/20140301004349im_/http://images.apple.com/home/images/promo_iphone5s.jpg);
 }
 
 .little-picture-two {
-    background-color: rgb(51, 185, 51);
+    background-image: url(https://web.archive.org/web/20140301004350im_/http://images.apple.com/home/images/promo_iphone5c.jpg);
     margin-right: 1px;
     margin-left: 1px;
 }
 
 .little-picture-three {
-    background-color: rgb(177, 170, 170);
+    background-image: url(https://web.archive.org/web/20140301004351im_/http://images.apple.com/home/images/promo_30_years.jpg);
     margin-right: 1px;
 }
 
 .little-picture-four {
-    background-color: grey;
+    background-image: url(https://web.archive.org/web/20140301004352im_/http://images.apple.com/home/images/promo_supplier_responsibility.jpg);
 }
 
 .footer-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 60%;
+    display: block;
+    width: 55%;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #6e6e6e;
+    padding-top: 20px;
+    min-width: 980px;
+    letter-spacing: -0.2px;
+}
+
+.footer-wrapper a {
+    text-decoration: none;
+    color: #0088cc;
+    padding-right: 3px;
+    padding-left: 3px;
+    border-right: solid #d1c9c9 1px;
+}
+
+.footer-wrapper a:hover {
+    text-decoration: underline;
+}
+
+.footer-wrapper .first {
+    border: none;
+}
+
+.right {
+    float: right;
+    width: 47%;
+}
+
+.us-flag {
+    vertical-align: bottom;
+    padding-left: 3px;
+}
+
+.left-top {
+    float: left;
+    clear: both;
+    width: 49%;
+    text-align: left;
+    padding-top: 1px;
+    padding-bottom: 13px;
+}
+
+.left-top a {
+    padding: 0;
+    border: none;
+}
+
+.left-bottom {
+    float: left;
+    clear: both;
+    width: 49%;
+    text-align: left;
+}
+
+.left-bottom p {
+    display: inline;
+}
+
+.left-bottom ul {
+    display: inline;
 }

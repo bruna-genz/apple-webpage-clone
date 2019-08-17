@@ -4,20 +4,23 @@
     box-sizing: border-box;
 }
 
-body nav {
-    position: relative;
+body {
+    display: block;
 }
 
-.nav-bar-outer {
-    position: absolute;
-    top: 15px;
-    left: 25%;
+body nav {
+    position: relative; 
+    display: block;
+    z-index: 100;
+    margin: 18px auto; 
+    width: 944px;
+    height: auto;
     border: outset 1px #999696;
     border-bottom: none;
     border-radius: 4px;
 }
 
-.nav-bar-inner {
+.container-links {
     display: flex;
     border-radius: 3px;
 }
@@ -38,15 +41,32 @@ body nav {
     padding-bottom: 3px;
 }
 
-.nav-bar-links il {
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline;
+}
+
+.nav-bar-links li,
+.search-bar,
+.search-bar input {
     background-image: linear-gradient(#928f8f,#797878, #5c5a5a, #797878);
     border: outset 1px #999696;
+}
+
+.nav-bar-links li {
     width: 100px;
     padding-top: 8px;
     padding-bottom: 8px;
 }
 
-.nav-bar-links il a {
+.nav-bar-links li:hover {
+    background-image: linear-gradient(#5f5f5f,#4d4d4d, #3f3f3f, #4d4d4d);
+}
+
+.nav-bar-links li a {
     text-decoration: none;
     color:white;
     font-size: 15px;
@@ -54,28 +74,30 @@ body nav {
 }
 
 .search-bar {
-    background-image: linear-gradient(#928f8f,#797878, #5c5a5a, #797878);
     padding: 7px 20px 3px 20px;
-    border: outset 1px #999696;
 }
 
 .search-bar input {
-    background-image: linear-gradient(#928f8f,#797878, #5c5a5a, #797878);
     border-radius: 10px;
-    border: inset 1px rgb(71, 68, 68);
     width: 100px;
     height: 20px;
 }
 
 .billbord-picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     size: 100%;
-    width: 75%;
-    height: 640px;
+    width: 100%;
+    height: 650px;
     margin: 0 auto;
     background-image: url(https://web.archive.org/web/20140228114747im_/http://images.apple.com/v/home/as/images/your_verse_hero.jpg);
     background-position-x: 50%;
     background-position-y: 100%;
     background-size: 1440px 1315px;
+    background-repeat: no-repeat;
 }
 
 @media only screen and (max-width: 1600px) {
@@ -109,12 +131,13 @@ body nav {
 
 .billbord-picture header div {
     padding-top: 10px;
+    font-size: 22px;
 }
 
-.billbord-picture header div a {
+.billbord-picture header a {
     text-decoration: none;
     color: white;
-    font-size: 22px;
+    
 }
 
 .billbord-picture header div a:hover {
@@ -122,21 +145,23 @@ body nav {
 }
 
 aside {
-    width: 75%;
-    margin: 0 auto;
-}
-
-@media only screen and (max-width: 1600px) {
-    aside {
-        width: 100%;
-    }
+    display: flex;
+    width: 100%;
+    padding-top: 578px;
 }
 
 aside ul {
     display: flex;
+    margin: 0 auto;
 }
 
-aside ul il {
+@media only screen and (max-width: 1600px) {
+    aside ul {
+        width: 100%;
+    }
+}
+
+aside ul li {
     width: 360px;
     height: 200px;
     margin-top: 1px;
@@ -162,12 +187,11 @@ aside ul il {
 }
 
 .footer-wrapper {
-    display: block;
-    width: 55%;
     margin: 0 auto;
+    width: 55%;
+    padding-top: 20px;
     font-size: 12px;
     color: #6e6e6e;
-    padding-top: 20px;
     min-width: 980px;
     letter-spacing: -0.2px;
 }

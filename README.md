@@ -7,4 +7,6 @@ I clone this page using:
 * HTML;
 * CSS; 
 
+[Live version](https://bruna-genz.github.io/apple-webpage-clone/).
+
 Created by [Bruna Genz](@https://github.com/bruna-genz).

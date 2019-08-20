@@ -37,8 +37,8 @@ body nav {
 }
 
 .nav-bar-links .logo {
-    padding-top: 5px;
-    padding-bottom: 3px;
+    padding-top: 9px;
+    padding-bottom: 7px;
 }
 
 ul {
@@ -81,6 +81,19 @@ li {
     border-radius: 10px;
     width: 100px;
     height: 20px;
+    border: inset 1px #999696
+}
+
+.magnifier {
+    position: absolute;
+    bottom: 15px;
+    right: 100px;
+    height: 38%;
+}
+
+.fa-search {
+    color: white;
+    height: 80%;
 }
 
 .billbord-picture {
